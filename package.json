@@ -1,0 +1,15 @@
+{
+  "name": "resolveai",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Shruti Gajjar",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
