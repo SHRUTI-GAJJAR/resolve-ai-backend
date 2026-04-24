@@ -1,4 +1,4 @@
-const { createTicket, getAllTickets } = require("../services/ticket.service");
+const { createTicket, getAllTickets,getTicketById } = require("../services/ticket.service");
 
 const createTicketController = async (req, res, next) => {
   try {
@@ -19,4 +19,14 @@ const getAllTicketsController = async (req, res, next) => {
   }
 };
 
-module.exports = { createTicketController, getAllTicketsController };
+const getTicketByIdController = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const ticket = await getTicketById(id);
+    res.status(200).json(ticket);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { createTicketController, getAllTicketsController, getTicketByIdController };

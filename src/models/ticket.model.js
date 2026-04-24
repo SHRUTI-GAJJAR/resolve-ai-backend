@@ -13,6 +13,11 @@ const ticketSchema = new mongoose.Schema(
       enum: ["Low", "Medium", "High"],
       required: true
     },
+    status: {
+      type: String,
+      enum: ["open", "in-progress", "closed"],
+      default: "open"
+    },
     response: { type: String, required: true }
   },
   { timestamps: true }

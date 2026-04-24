@@ -27,4 +27,18 @@ const getAllTickets = async () => {
   }
 };
 
-module.exports = { createTicket, getAllTickets };
+const getTicketById = async (id) => {
+  try {
+    const ticket = await Ticket.findById(id);
+    if (!ticket) {
+      const error = new Error("Ticket not found");
+      error.statusCode = 404;
+      throw error;
+    }
+    return ticket;
+  } catch (error) {
+    throw error;
+  }
+};
+
+module.exports = { createTicket, getAllTickets,getTicketById };
