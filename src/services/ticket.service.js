@@ -18,4 +18,13 @@ const createTicket = async (text) => {
   }
 };
 
-module.exports = { createTicket };
+const getAllTickets = async () => {
+  try {
+    const tickets = await Ticket.find().sort({ createdAt: -1 });
+    return tickets;
+  } catch (error) {
+    throw new Error("Failed to fetch tickets");
+  }
+};
+
+module.exports = { createTicket, getAllTickets };
