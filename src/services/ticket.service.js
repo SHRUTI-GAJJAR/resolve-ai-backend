@@ -3,7 +3,19 @@ const { analyzeTicket } = require("../ai/ai.service");
 
 const createTicket = async (text) => {
   try {
-    const aiResult = await analyzeTicket(text);
+    let aiResult;
+
+    try {
+      aiResult = await analyzeTicket(text);
+    } catch (err) {
+      console.error("AI FAILED:", err.message);
+
+      aiResult = {
+        category: "General",
+        priority: "Low",
+        response: "We are looking into your issue."
+      };
+    }
 
     const ticket = await Ticket.create({
       text,
@@ -14,7 +26,8 @@ const createTicket = async (text) => {
 
     return ticket;
   } catch (error) {
-    throw new Error("Failed to create ticket");
+    console.error("SERVICE ERROR:", error);
+    throw error;
   }
 };
 

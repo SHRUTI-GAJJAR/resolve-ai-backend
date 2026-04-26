@@ -4,7 +4,12 @@ const createTicketController = async (req, res, next) => {
   try {
     const { text } = req.body;
     const ticket = await createTicket(text);
-    res.status(201).json(ticket);
+
+    res.status(201).json({
+      message: `Your issue is classified as ${ticket.category}`,
+      response: ticket.response
+    });
+
   } catch (error) {
     next(error);
   }

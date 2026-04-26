@@ -1,27 +1,68 @@
-const analyzeTicketPrompt = (text) => `
-You are an AI support assistant.
+const { callAI } = require("./huggingface");
+const { analyzeTicketPrompt } = require("./prompts");
 
-Analyze the following support ticket and classify it.
+const classifyByRules = (text) => {
+  const t = text.toLowerCase();
 
-Text: "${text}"
+  if (t.includes("payment") || t.includes("money") || t.includes("refund")) {
+    return "Billing";
+  }
 
-Return ONLY valid JSON in this exact format:
-{
-  "category": "",
-  "priority": "",
-  "response": ""
-}
+  if (t.includes("login") || t.includes("password")) {
+    return "Account";
+  }
 
-Rules:
-- Payment issues → Billing
-- Login/password issues → Account
-- Errors/bugs → Technical
-- If unclear → General
+  if (t.includes("error") || t.includes("bug") || t.includes("crash")) {
+    return "Technical";
+  }
 
-Category must be one of: Billing, Technical, Account, General
-Priority must be one of: Low, Medium, High
+  return null;
+};
 
-Do not include any explanation or extra text.
-`;
+const safeParse = (text) => {
+  try {
+    return JSON.parse(text);
+  } catch {
+    const match = text.match(/\{[\s\S]*\}/);
+    if (match) return JSON.parse(match[0]);
+    throw new Error("Invalid JSON");
+  }
+};
 
-module.exports = { analyzeTicketPrompt };
+const analyzeTicket = async (text) => {
+  try {
+    const ruleCategory = classifyByRules(text);
+
+    if (ruleCategory) {
+      return {
+        category: ruleCategory,
+        priority: "High",
+        response: "We are checking your issue and will resolve it soon."
+      };
+    }
+
+    const prompt = analyzeTicketPrompt(text);
+    const aiRaw = await callAI(prompt);
+
+    console.log("🔥 FINAL RAW AI:", aiRaw);
+
+    const parsed = safeParse(aiRaw);
+
+    return {
+      category: parsed.category || "General",
+      priority: parsed.priority || "Low",
+      response: parsed.response || "We are looking into your issue."
+    };
+
+  } catch (error) {
+    console.error("AI SERVICE FAILED:", error.message);
+
+    return {
+      category: "General",
+      priority: "Low",
+      response: "We are looking into your issue."
+    };
+  }
+};
+
+module.exports = { analyzeTicket };
