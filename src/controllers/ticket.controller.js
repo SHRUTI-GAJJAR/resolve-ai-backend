@@ -1,9 +1,17 @@
-const { createTicket, getAllTickets,getTicketById } = require("../services/ticket.service");
+const {
+  createTicket,
+  getAllTickets,
+  getTicketById
+} = require("../services/ticket.service");
 
 const createTicketController = async (req, res, next) => {
   try {
     const { text } = req.body;
-    const ticket = await createTicket(text);
+
+    const ticket = await createTicket(
+      text,
+      req.user._id
+    );
 
     res.status(201).json({
       message: `Your issue is classified as ${ticket.category}`,
@@ -17,8 +25,10 @@ const createTicketController = async (req, res, next) => {
 
 const getAllTicketsController = async (req, res, next) => {
   try {
-    const tickets = await getAllTickets();
+    const tickets = await getAllTickets(req.user._id);
+
     res.status(200).json(tickets);
+
   } catch (error) {
     next(error);
   }
@@ -27,11 +37,21 @@ const getAllTicketsController = async (req, res, next) => {
 const getTicketByIdController = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const ticket = await getTicketById(id);
+
+    const ticket = await getTicketById(
+      id,
+      req.user._id
+    );
+
     res.status(200).json(ticket);
+
   } catch (error) {
     next(error);
   }
 };
 
-module.exports = { createTicketController, getAllTicketsController, getTicketByIdController };
+module.exports = {
+  createTicketController,
+  getAllTicketsController,
+  getTicketByIdController
+};

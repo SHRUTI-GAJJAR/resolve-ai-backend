@@ -5,3 +5,14 @@
 {"level":"error","message":"AI API failed","timestamp":"2026-04-25T05:57:24.833Z"}
 {"level":"error","message":"AI API failed","timestamp":"2026-04-25T05:59:06.889Z"}
 {"level":"error","message":"AI API failed","timestamp":"2026-04-25T06:19:00.269Z"}
+{"level":"error","message":"Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2b9887731dcsm7496185ad.14 - gsmtp","timestamp":"2026-04-29T04:30:44.962Z"}
+{"level":"error","message":"User already exists","timestamp":"2026-04-29T04:32:05.996Z"}
+{"level":"error","message":"Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2b9887ad80bsm7807215ad.37 - gsmtp","timestamp":"2026-04-29T04:34:39.789Z"}
+{"level":"error","message":"User already exists","timestamp":"2026-04-29T06:44:36.104Z"}
+{"level":"error","message":"User already exists","timestamp":"2026-04-29T07:10:41.013Z"}
+{"level":"error","message":"Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c7fd65065e1sm1197418a12.22 - gsmtp","timestamp":"2026-04-29T07:12:51.513Z"}
+{"level":"error","message":"comparePassword is not defined","timestamp":"2026-05-02T07:11:11.218Z"}
+{"level":"error","message":"Cannot set properties of undefined (setting 'user')","timestamp":"2026-05-02T07:12:54.970Z"}
+{"level":"error","message":"Ticket validation failed: user: Path `user` is required.","timestamp":"2026-05-05T05:23:30.936Z"}
+{"level":"error","message":"Expected ',' or '}' after property value in JSON at position 15 (line 2 column 13)","timestamp":"2026-05-05T05:24:05.195Z"}
+{"level":"error","message":"Ticket validation failed: user: Path `user` is required.","timestamp":"2026-05-05T05:24:13.057Z"}
