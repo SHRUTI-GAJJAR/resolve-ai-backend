@@ -19,14 +19,23 @@ const loginController = async (req, res, next) => {
   try {
     const user = await loginUser(req.body);
 
+    /**
+     * SESSION
+     */
     req.session.user = {
       _id: user._id,
       name: user.name,
       email: user.email
     };
 
+    /**
+     * JWT TOKEN
+     */
+    const token = generateToken(user._id);
+
     res.status(200).json({
-      message: "Login successful"
+      message: "Login successful",
+      token
     });
 
   } catch (error) {

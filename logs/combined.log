@@ -134,3 +134,64 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-05-05T05:26:52.970Z"}
 {"level":"info","message":"POST /api/auth/login","timestamp":"2026-05-05T05:26:59.384Z"}
 {"level":"info","message":"POST /api/tickets","timestamp":"2026-05-05T05:27:03.475Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-05-06T06:01:35.656Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:01:49.968Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:01:53.152Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-05-06T06:02:10.601Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:02:18.253Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:02:18.998Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:02:19.185Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:02:19.491Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:3000/api-docs","timestamp":"2026-05-06T06:02:19.649Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-05-06T06:03:02.679Z"}
+{"level":"info","message":"Server running on port 6000","timestamp":"2026-05-06T06:03:15.453Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:6000/api-docs","timestamp":"2026-05-06T06:03:22.750Z"}
+{"level":"info","message":"GET /api-docshttp://localhost:6000/api-docs","timestamp":"2026-05-06T06:03:24.476Z"}
+{"level":"info","message":"Server running on port 6000","timestamp":"2026-05-06T12:23:07.835Z"}
+{"level":"info","message":"Server running on port 6000","timestamp":"2026-05-06T12:27:09.356Z"}
+{"level":"info","message":"Server running on port 6000","timestamp":"2026-05-06T12:30:38.095Z"}
+{"level":"info","message":"Server running on port 6000","timestamp":"2026-05-06T12:35:22.955Z"}
+{"level":"info","message":"Server running on port 6000","timestamp":"2026-05-06T12:35:27.155Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-06T12:36:18.698Z"}
+{"level":"info","message":"GET /api-docs","timestamp":"2026-05-06T12:36:23.434Z"}
+{"level":"info","message":"GET /api-docs/","timestamp":"2026-05-06T12:36:23.460Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui.css","timestamp":"2026-05-06T12:36:23.682Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-bundle.js","timestamp":"2026-05-06T12:36:23.687Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-standalone-preset.js","timestamp":"2026-05-06T12:36:23.696Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-init.js","timestamp":"2026-05-06T12:36:23.699Z"}
+{"level":"info","message":"GET /api-docs/favicon-32x32.png","timestamp":"2026-05-06T12:36:24.497Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-06T12:41:34.893Z"}
+{"level":"info","message":"GET /api-docs/","timestamp":"2026-05-06T12:41:36.586Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui.css","timestamp":"2026-05-06T12:41:36.653Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-bundle.js","timestamp":"2026-05-06T12:41:36.660Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-standalone-preset.js","timestamp":"2026-05-06T12:41:36.663Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-init.js","timestamp":"2026-05-06T12:41:36.666Z"}
+{"level":"info","message":"GET /api-docs/favicon-32x32.png","timestamp":"2026-05-06T12:41:37.404Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-06T12:45:23.624Z"}
+{"level":"info","message":"GET /api-docs/","timestamp":"2026-05-06T12:45:28.880Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui.css","timestamp":"2026-05-06T12:45:28.970Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-bundle.js","timestamp":"2026-05-06T12:45:28.981Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-standalone-preset.js","timestamp":"2026-05-06T12:45:28.986Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-init.js","timestamp":"2026-05-06T12:45:28.990Z"}
+{"level":"info","message":"GET /api-docs/favicon-32x32.png","timestamp":"2026-05-06T12:45:29.689Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-07T04:00:14.922Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-07T07:03:13.300Z"}
+{"level":"info","message":"GET /api/auth/google","timestamp":"2026-05-07T07:03:24.674Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-07T07:19:44.493Z"}
+{"level":"info","message":"GET /api/auth/google","timestamp":"2026-05-07T07:20:10.591Z"}
+{"level":"info","message":"GET /api/auth/google/callback","timestamp":"2026-05-07T15:31:46.721Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-07T15:37:33.938Z"}
+{"level":"info","message":"GET /api/auth/google/callback","timestamp":"2026-05-07T15:37:47.359Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-07T15:43:45.708Z"}
+{"level":"info","message":"GET /api/auth/google/callback","timestamp":"2026-05-07T15:43:58.232Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2026-05-08T06:56:01.558Z"}
+{"level":"info","message":"GET /api/auth/google","timestamp":"2026-05-08T06:56:09.738Z"}
+{"level":"info","message":"GET /api-docs","timestamp":"2026-05-08T06:56:41.231Z"}
+{"level":"info","message":"GET /api-docs/","timestamp":"2026-05-08T06:56:41.365Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui.css","timestamp":"2026-05-08T06:56:41.848Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-standalone-preset.js","timestamp":"2026-05-08T06:56:41.880Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-bundle.js","timestamp":"2026-05-08T06:56:41.930Z"}
+{"level":"info","message":"GET /api-docs/swagger-ui-init.js","timestamp":"2026-05-08T06:56:41.935Z"}
+{"level":"info","message":"GET /api/auth/google/callback","timestamp":"2026-05-08T06:56:53.548Z"}
+{"level":"info","message":"GET /api/auth/google/callback","timestamp":"2026-05-08T06:57:08.526Z"}
+{"level":"info","message":"GET /api/auth/github","timestamp":"2026-05-08T06:58:51.562Z"}
