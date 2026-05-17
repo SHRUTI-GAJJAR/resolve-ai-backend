@@ -58,6 +58,14 @@ app.use(
   swaggerUi.setup(swaggerSpec)
 );
 
+
+//testing api
+app.get("/api/test", (req, res) => {
+  res.json({ message: "API is working!" });
+});
+
+
+
 /**
  * ROUTES
  */

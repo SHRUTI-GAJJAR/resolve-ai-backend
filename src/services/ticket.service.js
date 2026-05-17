@@ -35,6 +35,7 @@ const createTicket = async (text, userId) => {
 
 const getAllTickets = async (userId) => {
   try {
+
     const tickets = await Ticket.find({ user: userId })
       .sort({ createdAt: -1 });
 
