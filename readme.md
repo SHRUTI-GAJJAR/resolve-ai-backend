@@ -2,18 +2,19 @@
 
 # 🚀 Resolve AI Backend
 
-### AI-Powered Backend Architecture using Node.js & Express
+### AI-Powered Ticket Resolution Backend System
 
-A scalable and production-ready backend system designed for intelligent API workflows, modular architecture, and modern backend development practices.
+A scalable backend application built using **Node.js**, **Express.js**, **MongoDB**, and **Generative AI** for intelligent ticket management, authentication, and automated resolution workflows.
 
 <br/>
 
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
 <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Render-Deployed-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
 
-<br/>
 <br/>
 
 [![GitHub stars](https://img.shields.io/github/stars/SHRUTI-GAJJAR/resolve-ai-backend?style=social)](https://github.com/SHRUTI-GAJJAR/resolve-ai-backend)
@@ -25,31 +26,35 @@ A scalable and production-ready backend system designed for intelligent API work
 
 # 📌 Overview
 
-Resolve AI Backend is a modern backend application built with **Node.js**, **Express.js**, and **MongoDB**.
+Resolve AI Backend is a modern backend system designed for intelligent ticket management and automated resolution workflows.
 
-The project focuses on:
+The project integrates:
 
-- Clean backend architecture
-- AI workflow integration
-- RESTful API development
-- Scalable modular structure
-- Secure environment management
-- Docker-based deployment support
+- 🔐 Authentication system
+- 🤖 AI-generated ticket resolution
+- 📧 Email integration
+- 🌐 OAuth login support
+- 📦 RESTful API architecture
+- 📚 Swagger API documentation
+- 🐳 Docker-based deployment
 
 ---
 
 # ✨ Features
 
-## 🔥 Core Features
+## 🔥 Core Functionalities
 
-- ⚡ High-performance REST APIs
-- 🤖 AI-integrated backend workflows
+- 🎫 AI-powered ticket management system
+- 🔐 JWT Authentication & Authorization
+- 🌐 Google OAuth Login
+- 🐙 GitHub OAuth Login
+- 📧 Email service integration
+- 📚 Swagger API documentation
 - 🧩 Modular MVC architecture
-- 🔐 Secure environment configuration
-- 📦 MongoDB database integration
-- 🛠️ Middleware-based request handling
 - 🐳 Docker container support
-- 🚀 Production-ready backend structure
+- 🛡️ Secure middleware handling
+- 📦 MongoDB database integration
+- 📄 Logging system using Winston
 
 ---
 
@@ -59,38 +64,49 @@ The project focuses on:
 |----------|--------------|
 | Backend | Node.js, Express.js |
 | Database | MongoDB, Mongoose |
-| Authentication | JWT |
-| Dev Tools | Nodemon, dotenv |
-| Containerization | Docker |
-| API Testing | Postman |
+| Authentication | JWT, Passport.js |
+| OAuth | Google OAuth, GitHub OAuth |
+| AI Integration | OpenAI, Google Generative AI |
+| Documentation | Swagger |
+| Logging | Winston |
+| Email Service | Nodemailer |
+| Security | Helmet, Express Validator |
+| Deployment | Render, Docker |
 
 ---
 
-# 📂 Folder Structure
+# 📂 Project Structure
 
 ```bash
 resolve-ai-backend/
 │
-├── src/
-│   ├── config/          # Database & environment setup
-│   ├── controllers/     # Business logic
-│   ├── routes/          # API routes
-│   ├── models/          # Database schemas
-│   ├── middleware/      # Auth & error handling
-│   ├── services/        # Core services
-│   ├── utils/           # Utility functions
-│   └── validations/     # Request validations
+├── logs/
+│   ├── combined.log
+│   └── error.log
 │
-├── app.js               # Main application file
+├── src/
+│   ├── ai/              # AI-related logic
+│   ├── config/          # Database & configuration
+│   ├── controllers/     # Business logic
+│   ├── middlewares/     # Authentication & middleware
+│   ├── models/          # MongoDB models
+│   ├── routes/          # API routes
+│   ├── services/        # Service layer
+│   └── utils/           # Utility functions
+│
+├── .dockerignore
+├── .env
+├── .gitignore
+├── app.js
+├── docker-compose.yml
+├── dockerfile
 ├── package.json
-├── Dockerfile
-├── .env.example
 └── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Installation & Setup
 
 ## 1️⃣ Clone Repository
 
@@ -100,7 +116,7 @@ git clone https://github.com/SHRUTI-GAJJAR/resolve-ai-backend.git
 
 ---
 
-## 2️⃣ Navigate to Project
+## 2️⃣ Navigate into Project
 
 ```bash
 cd resolve-ai-backend
@@ -121,9 +137,21 @@ npm install
 Create a `.env` file in the root directory.
 
 ```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+MONGO_URI=
+HF_API_KEY=
+SESSION_SECRET=
+JWT_SECRET=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_CALLBACK_URL=
+
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+GITHUB_CALLBACK_URL=
+
+EMAIL_USER=
+EMAIL_PASS=
 ```
 
 ---
@@ -136,48 +164,67 @@ npm run dev
 
 ---
 
-# 🌐 Server Running On
+# 🌐 Live Deployment
+
+## Render Deployment
+
+https://resolve-ai-backend.onrender.com
+
+---
+
+# 📚 Swagger API Documentation
+
+Access Swagger Docs:
 
 ```bash
-http://localhost:5000
+http://localhost:5000/api-docs
 ```
 
 ---
 
-# 📡 API Architecture
+# 📡 API Endpoints
 
-## Base URL
-
-```bash
-/api
-```
-
----
-
-## Example Endpoints
+## 🔐 Authentication APIs
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/health` | Health Check |
-| POST | `/api/auth/register` | Register User |
-| POST | `/api/auth/login` | User Login |
-| GET | `/api/tasks` | Fetch Tasks |
-| POST | `/api/tasks` | Create Task |
+| GET | `/api/auth/github` | Login with GitHub |
+| GET | `/api/auth/github/callback` | GitHub OAuth Callback |
+| GET | `/api/auth/google` | Login with Google |
+| GET | `/api/auth/google/callback` | Google OAuth Callback |
+| POST | `/api/auth/register` | Register New User |
+| POST | `/api/auth/login` | Login User |
+| POST | `/api/auth/logout` | Logout User |
+| GET | `/api/auth/me` | Get Logged-in User |
 
 ---
 
-# 🧠 Backend Highlights
+## 🎫 Ticket APIs
 
-✅ Clean MVC Architecture  
-✅ Scalable Folder Structure  
-✅ Environment-Based Configuration  
-✅ Reusable Middleware System  
-✅ REST API Best Practices  
-✅ Docker Ready Deployment  
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/tickets` | Create New Ticket |
+| GET | `/api/tickets` | Get All Tickets |
+| GET | `/api/tickets/{id}` | Get Ticket By ID |
 
 ---
 
-# 🐳 Docker Setup
+# 🤖 AI Integration
+
+This backend integrates AI services for intelligent ticket resolution workflows using:
+
+- OpenAI API
+- Google Generative AI
+- Hugging Face API
+
+AI is used for:
+- Automated resolution suggestions
+- Smart ticket processing
+- Intelligent response generation
+
+---
+
+# 🐳 Docker Support
 
 ## Build Docker Image
 
@@ -195,23 +242,23 @@ docker run -p 5000:5000 resolve-ai-backend
 
 ---
 
-# 📈 Future Enhancements
+# 📈 Future Improvements
 
-- 🔥 Swagger API Documentation
-- 🔥 Redis Caching
-- 🔥 Rate Limiting
-- 🔥 CI/CD Pipeline
-- 🔥 Unit Testing
-- 🔥 Winston Logging System
-- 🔥 API Monitoring
+- 🔥 Role-based authorization
+- 🔥 Redis caching
+- 🔥 Rate limiting
+- 🔥 CI/CD pipeline
+- 🔥 Unit & integration testing
+- 🔥 Advanced AI workflows
+- 🔥 Real-time notifications
 
 ---
 
 # 👩‍💻 Author
 
-## Shruti Ujeniya
+## Shruti Gajjar
 
-📍 Ahmedabad, Gujarat, India  
+📍 Ahmedabad, Gujarat, India
 
 🔗 GitHub:  
 https://github.com/SHRUTI-GAJJAR
@@ -232,6 +279,6 @@ If you found this project useful:
 
 ## 🚀 Built with Node.js, Express & AI
 
-### Designed for scalable backend development
+### Designed for scalable backend architecture
 
 </div>
