@@ -66,7 +66,7 @@ The project integrates:
 | Database | MongoDB, Mongoose |
 | Authentication | JWT, Passport.js |
 | OAuth | Google OAuth, GitHub OAuth |
-| AI Integration | OpenAI, Google Generative AI |
+| AI Integration | Hugging Face API |
 | Documentation | Swagger |
 | Logging | Winston |
 | Email Service | Nodemailer |
@@ -177,7 +177,7 @@ https://resolve-ai-backend.onrender.com
 Access Swagger Docs:
 
 ```bash
-http://localhost:5000/api-docs
+https://resolve-ai-backend.onrender.com/api-docs
 ```
 
 ---
@@ -213,8 +213,6 @@ http://localhost:5000/api-docs
 
 This backend integrates AI services for intelligent ticket resolution workflows using:
 
-- OpenAI API
-- Google Generative AI
 - Hugging Face API
 
 AI is used for:
@@ -240,19 +238,6 @@ docker build -t resolve-ai-backend .
 docker run -p 5000:5000 resolve-ai-backend
 ```
 
----
-
-# 📈 Future Improvements
-
-- 🔥 Role-based authorization
-- 🔥 Redis caching
-- 🔥 Rate limiting
-- 🔥 CI/CD pipeline
-- 🔥 Unit & integration testing
-- 🔥 Advanced AI workflows
-- 🔥 Real-time notifications
-
----
 
 # 👩‍💻 Author
 
